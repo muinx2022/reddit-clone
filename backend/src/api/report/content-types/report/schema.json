@@ -1,0 +1,45 @@
+{
+  "collectionName": "reports",
+  "info": {
+    "singularName": "report",
+    "pluralName": "reports",
+    "displayName": "Report",
+    "description": "Report abusive post/comment"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "reporter": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::profile.profile"
+    },
+    "post": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post.post"
+    },
+    "comment": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::comment.comment"
+    },
+    "reason": {
+      "type": "text",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["open", "in_review", "resolved", "rejected"],
+      "default": "open"
+    },
+    "handledBy": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::profile.profile"
+    },
+    "createdAt": { "type": "timestamp" },
+    "updatedAt": { "type": "timestamp" }
+  }
+}

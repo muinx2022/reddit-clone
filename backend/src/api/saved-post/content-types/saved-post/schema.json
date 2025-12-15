@@ -1,0 +1,26 @@
+{
+  "collectionName": "saved_posts",
+  "info": {
+    "singularName": "saved-post",
+    "pluralName": "saved-posts",
+    "displayName": "SavedPost",
+    "description": "Bookmarks / saved posts by profile"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "profile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::profile.profile"
+    },
+    "post": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post.post"
+    },
+    "folder": { "type": "string" },
+    "createdAt": { "type": "timestamp" }
+  }
+}

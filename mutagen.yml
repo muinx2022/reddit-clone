@@ -1,0 +1,24 @@
+# FILE: mutagen.yml (Phiên bản v0.18.1)
+
+compose:
+  file: docker-compose.yml 
+
+strapi: # Tên phiên đồng bộ
+  alpha: "./backend"
+  beta: "docker://strapi-dev-app/opt/app"
+  ignore:
+    paths:
+      - "node_modules"
+      - ".cache"
+      - ".git"
+      - ".env"
+      - "data"
+
+nextjs: # Tên phiên đồng bộ
+  alpha: "./frontend"
+  beta: "docker://nextjs-dev-app/usr/src/app"
+  ignore:
+    paths:
+      - "node_modules"
+      - ".next"
+      - ".git"

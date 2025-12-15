@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  # -------------------------------------------------------------------
+  # 1. DỊCH VỤ BACKEND (Strapi)
+  # -------------------------------------------------------------------
+  backend:
+    container_name: strapi-dev-app
+    build:
+      context: ./backend
+      target: development
+    ports:
+      - "1337:1337"
+    # LỆNH MỚI: Dùng sleep infinity để giữ container chạy (Mutagen cần điều này)
+    command: ["sleep", "infinity"] 
+    volumes:
+      # Named Volume: Mutagen KHÔNG sync node_modules, container tự cài đặt
+      - strapi-node_modules:/opt/app/node_modules
+      # Named Volume: Lưu trữ database (Nếu dùng SQLite)
+      - strapi-data:/opt/app/data 
+    environment:
+      # Đã sửa lỗi: Định dạng mapping (Khóa: Giá trị)
+      DATABASE_CLIENT: sqlite 
+      NODE_ENV: development
+    restart: always
+
+  # -------------------------------------------------------------------
+  # 2. DỊCH VỤ FRONTEND (Next.js)
+  # -------------------------------------------------------------------
+  frontend:
+    container_name: nextjs-dev-app
+    build:
+      context: ./frontend
+      target: development
+    ports:
+      - "3000:3000"
+    # LỆNH MỚI: Dùng sleep infinity để giữ container chạy
+    command: ["sleep", "infinity"] 
+    volumes:
+      # Named Volume: Mutagen KHÔNG sync node_modules
+      - nextjs-node_modules:/usr/src/app/node_modules
+    environment:
+      NODE_ENV: development
+    restart: always
+
+# Định nghĩa các Named Volumes
+volumes:
+  strapi-node_modules:
+  strapi-data:
+  nextjs-node_modules:

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["file:///D:/Projects/reddit-clone/frontend/app/page.tsx"],"sourcesContent":["export default function HomePage() {\r\n    return (\r\n        <div style={{ height: '350px', backgroundColor: '#e2e8f0', padding: '20px' }}>\r\n            <h1>Test Content</h1>\r\n            <p>Đây là nội dung giả lập cao 1000px để kiểm tra footer.</p>\r\n        </div>\r\n    );\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACpB,qBACI,8OAAC;QAAI,OAAO;YAAE,QAAQ;YAAS,iBAAiB;YAAW,SAAS;QAAO;;0BACvE,8OAAC;0BAAG;;;;;;0BACJ,8OAAC;0BAAE;;;;;;;;;;;;AAGf"}}]
+}

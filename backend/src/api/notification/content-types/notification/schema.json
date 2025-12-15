@@ -1,0 +1,37 @@
+{
+  "collectionName": "notifications",
+  "info": {
+    "singularName": "notification",
+    "pluralName": "notifications",
+    "displayName": "Notification"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "recipient": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::profile.profile"
+    },
+    "actor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::profile.profile"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["comment", "reply", "mention", "vote", "follow", "moderation"],
+      "required": true
+    },
+    "data": {
+      "type": "json",
+      "description": "Arbitrary payload (e.g. {postId, commentId, excerpt})"
+    },
+    "isRead": {
+      "type": "boolean",
+      "default": false
+    },
+    "createdAt": { "type": "timestamp" }
+  }
+}

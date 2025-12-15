@@ -1,0 +1,27 @@
+# ---------------------------------------------------------------- #
+# MỤC TIÊU CHUNG CHO DỰ ÁN NODE.JS (ÁP DỤNG CHO CẢ STRAPI VÀ NEXT.JS)
+# ---------------------------------------------------------------- #
+/node_modules
+/dist
+/build
+.env
+.env.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---------------------------------------------------------------- #
+# MỤC TIÊU CỤ THỂ CHO NEXT.JS
+# ---------------------------------------------------------------- #
+/.next/      # Thư mục build của Next.js
+/out/        # Thư mục xuất tĩnh (static export)
+/public/uploads # Nếu bạn upload tệp trực tiếp vào public
+
+# ---------------------------------------------------------------- #
+# MỤC TIÊU CỤ THỂ CHO STRAPI
+# ---------------------------------------------------------------- #
+.cache/      # Thư mục cache của Strapi
+/public/uploads # Thư mục chứa các tệp đã upload
+
+# Giữ nguyên ngắt dòng (binary) cho mọi thứ trong node_modules
+node_modules/** text eol=lf

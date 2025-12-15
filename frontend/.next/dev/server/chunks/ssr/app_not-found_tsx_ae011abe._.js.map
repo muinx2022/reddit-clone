@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/Projects/reddit-clone/frontend/app/not-found.tsx"],"sourcesContent":["'use client';\r\n\r\nexport default function NotFound() {\r\n    return (\r\n        <div style={{ minHeight: '300px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>\r\n            <h1 style={{ color: '#3b82f6', fontSize: '32px', fontWeight: 'bold' }}>Reddit Clone</h1>\r\n            <p>Oops! Page not found.</p>\r\n        </div>\r\n    );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;;AAEe,SAAS;IACpB,qBACI,8OAAC;QAAI,OAAO;YAAE,WAAW;YAAS,SAAS;YAAQ,eAAe;YAAU,YAAY;YAAU,gBAAgB;QAAS;;0BACvH,8OAAC;gBAAG,OAAO;oBAAE,OAAO;oBAAW,UAAU;oBAAQ,YAAY;gBAAO;0BAAG;;;;;;0BACvE,8OAAC;0BAAE;;;;;;;;;;;;AAGf"}}]
+}

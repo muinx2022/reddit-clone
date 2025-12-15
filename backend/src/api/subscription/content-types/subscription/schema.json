@@ -1,0 +1,30 @@
+{
+  "collectionName": "subscriptions",
+  "info": {
+    "singularName": "subscription",
+    "pluralName": "subscriptions",
+    "displayName": "Subscription",
+    "description": "Follow / subscribe to categories or profiles"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "subscriber": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::profile.profile"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category"
+    },
+    "targetProfile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::profile.profile"
+    },
+    "createdAt": { "type": "timestamp" }
+  }
+}
