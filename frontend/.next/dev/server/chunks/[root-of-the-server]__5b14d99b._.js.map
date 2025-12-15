@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///D:/Projects/reddit-clone/frontend/app/api/create-profile/route.ts"],"sourcesContent":["import { NextResponse } from \"next/server\";\r\n\r\nexport async function POST(req: Request) {\r\n    try {\r\n        const body = await req.json();\r\n        console.log(\"Create profile body:\", body);\r\n\r\n        return NextResponse.json(\r\n            { ok: true, received: body },\r\n            { status: 200 }\r\n        );\r\n    } catch (err) {\r\n        console.error(\"Create profile error:\", err);\r\n        return NextResponse.json(\r\n            { ok: false, error: \"Cannot parse JSON\" },\r\n            { status: 400 }\r\n        );\r\n    }\r\n}\r\n"],"names":[],"mappings":";;;;AAAA;;AAEO,eAAe,KAAK,GAAY;IACnC,IAAI;QACA,MAAM,OAAO,MAAM,IAAI,IAAI;QAC3B,QAAQ,GAAG,CAAC,wBAAwB;QAEpC,OAAO,gJAAY,CAAC,IAAI,CACpB;YAAE,IAAI;YAAM,UAAU;QAAK,GAC3B;YAAE,QAAQ;QAAI;IAEtB,EAAE,OAAO,KAAK;QACV,QAAQ,KAAK,CAAC,yBAAyB;QACvC,OAAO,gJAAY,CAAC,IAAI,CACpB;YAAE,IAAI;YAAO,OAAO;QAAoB,GACxC;YAAE,QAAQ;QAAI;IAEtB;AACJ"}}]
-}
